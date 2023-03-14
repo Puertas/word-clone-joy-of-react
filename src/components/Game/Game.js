@@ -14,13 +14,7 @@ function Game() {
   const [guesses, setGuesses] = useState([]);
 
   function addGuess(guess) {
-    setGuesses([
-      ...guesses,
-      {
-        id: crypto.randomUUID(),
-        label: guess,
-      },
-    ]);
+    setGuesses([...guesses, guess]);
   }
 
   return (
