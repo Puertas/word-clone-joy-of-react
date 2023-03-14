@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
-function GuessInput() {
+function GuessInput({ addGuess }) {
   const [value, setValue] = useState('');
   return (
     <form
       className='guess-input-wrapper'
       onSubmit={(event) => {
         event.preventDefault();
-        console.log('Guess: ' + value);
+        addGuess(value);
         setValue('');
       }}
     >
